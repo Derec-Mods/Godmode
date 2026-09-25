@@ -1,4 +1,4 @@
-package io.github.derexxd.godmode;
+t:"package io.github.derexxd.godmode;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
