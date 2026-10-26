@@ -10,7 +10,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public final class GodManager {
+public class GodManager {
 
     private final Plugin plugin;
     private final Path file;
