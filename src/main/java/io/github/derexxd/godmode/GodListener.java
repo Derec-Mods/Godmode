@@ -23,15 +23,17 @@ public class GodListener implements Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
     public void onDamage(EntityDamageEvent e) {
-        if (!(e.getEntity() instanceof Player p)) return;
+        if (!(e.getEntity() instanceof Player p))
+            return;
         if (manager.isGod(p.getUniqueId())) {
             e.setCancelled(true);
             p.setFireTicks(0);
-            p.setFreezeTicks(0);
 
-            if (plugin.getConfig().getBoolean("thorns.enabled", true) && e instanceof EntityDamageByEntityEvent byEntity) {
+            if (plugin.getConfig().getBoolean("thorns.enabled", true)
+                    && e instanceof EntityDamageByEntityEvent byEntity) {
                 LivingEntity attacker = null;
-                if (byEntity.getDamager() instanceof Projectile projectile && projectile.getShooter() instanceof LivingEntity shooter) {
+                if (byEntity.getDamager() instanceof Projectile projectile
+                        && projectile.getShooter() instanceof LivingEntity shooter) {
                     attacker = shooter;
                 } else if (byEntity.getDamager() instanceof LivingEntity living) {
                     attacker = living;
@@ -58,7 +60,8 @@ public class GodListener implements Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
     public void onHunger(FoodLevelChangeEvent e) {
-        if (!(e.getEntity() instanceof Player p)) return;
+        if (!(e.getEntity() instanceof Player p))
+            return;
         if (manager.isGod(p.getUniqueId())) {
             e.setCancelled(true);
             p.setFoodLevel(20);
