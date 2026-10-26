@@ -1,5 +1,5 @@
 name: Godmode
-version: '1.0.0.0'
+version: '${version}'
 main: io.github.derexxd.godmode.Godmode
 api-version: '1.18'
 prefix: DerexXD
