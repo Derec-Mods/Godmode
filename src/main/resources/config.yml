@@ -1,0 +1,5 @@
+# for fun, this will deal retribution damage to people attacking players with godmode on
+thorns:
+  enabled: true
+  damage: 500.0
+  launch-strength: 3.0
