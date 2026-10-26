@@ -10,7 +10,7 @@ website: https://www.derekchen.dev/
 commands:
   godmode:
     description: Toggle godmode for a player
-    usage: /godmode <player>
+    usage: /godmode [player]
     permission: godmode.admin
 
 permissions:

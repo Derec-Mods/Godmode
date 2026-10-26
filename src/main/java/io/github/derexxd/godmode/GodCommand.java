@@ -16,7 +16,7 @@ import java.util.Locale;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-public final class GodCommand implements CommandExecutor, TabCompleter {
+public class GodCommand implements CommandExecutor, TabCompleter {
 
     private final Plugin plugin;
     private final GodManager manager;
@@ -28,8 +28,17 @@ public final class GodCommand implements CommandExecutor, TabCompleter {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (args.length != 1) {
+        if (args.length == 0) {
+            if (sender instanceof Player player) {
+                apply(sender, player.getUniqueId(), player.getName());
+                return true;
+            }
             sender.sendMessage(ChatColor.RED + "Usage: /godmode <player>");
+            return true;
+        }
+
+        if (args.length != 1) {
+            sender.sendMessage(ChatColor.RED + "Usage: /godmode [player]");
             return true;
         }
 

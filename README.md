@@ -14,7 +14,7 @@ Lightweight administrator addition for servers that lets you set specific player
 - **Safe Auto-Saving**: Automatically saves in the background so you never lose data, even if the server crashes.
 
 ## Commands & Permissions
-- `/godmode <player>` — Toggle godmode for an online or offline player.
+- `/godmode [player]` — Toggle godmode for yourself, or specify an online or offline player.
 - Permission: `godmode.admin` (defaults to OP).
 
 ## ❤️ Credits:
